@@ -3,6 +3,7 @@
     <input type="text" v-model="todo">
     <button @click="addTodo">Add</button>
     <button @click="addTodoSaga">Add(Saga)</button>
+    <action-button :on-click="addTodoSaga"></action-button>
     <hr>
     <ul>
       <li v-for="todo in todos" @click="toggleTodo($index)">{{todo.text}} {{todo.completed}}</li>
@@ -13,8 +14,10 @@
 <script>
 import store from '../redux/store'
 import * as actions from '../redux/actions'
+import ActionButton from './ActionButton'
 
 export default {
+  components: {ActionButton},
   data () {
     return {
       todo: '',
