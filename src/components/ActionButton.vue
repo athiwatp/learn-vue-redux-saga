@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick">[Add]</button>
+  <button @click="onClick">Add(Dumb)</button>
 </template>
 
 <script>
